@@ -11,5 +11,5 @@ CREATE TABLE Reservation( Reservation_ID int IDENTITY(1,1) NOT NULL PRIMARY KEY,
 
 ALTER TABLE Reservation ADD CONSTRAINT incorrect_dates CHECK ((Date_To > Date_From) AND (Date_From <= '2018-04-04'));
 
-CREATE TABLE Facility( Facility_No int NOT NULL, Hotel_No int NOT NULL, Facility_Name VARCHAR(30), FOREIGN KEY (Hotel_No) REFERENCES Hotel (Hotel_No) 
+CREATE TABLE Facility( Facility_No int NOT NULL, Hotel_No int NOT NULL, Facility_Name VARCHAR(30) NOT NULL, FOREIGN KEY (Hotel_No) REFERENCES Hotel (Hotel_No) 
 ON UPDATE CASCADE ON DELETE NO ACTION, Primary KEY (Facility_NO,Hotel_No) );
