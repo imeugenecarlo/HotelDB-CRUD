@@ -27,6 +27,7 @@ namespace HotelDBOB_3
             conn = new SqlConnection(@"Data Source=localhost;Initial Catalog=HotelDB1;Integrated Security=True");
             cmd = new SqlCommand();
             cmd.Connection = conn;
+            //Tekst boks for at vise Databasen er forbundet
             MessageBox.Show("connected");
         }
         private void label1_Click(object sender, EventArgs e)
