@@ -85,7 +85,7 @@ namespace HotelDBOB_3
 
         private void Delete_button_Click(object sender, EventArgs e)
         {
-            string query = $"delete facility where facility_no='{Facility_ID_textBox.Text.ToString()}','{Hotel_No_textBox}'";
+            string query = $"delete from facility where facility_no='{Facility_ID_textBox.Text.ToString()}'AND hotel_no='{Hotel_No_textBox.Text.ToString()}'";
             cmd.CommandText = query;
             conn.Open();
             cmd.ExecuteNonQuery();
@@ -95,7 +95,7 @@ namespace HotelDBOB_3
             displaydata();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) //Find button
         {
             conn.Open();
             SqlCommand cmd = conn.CreateCommand();
