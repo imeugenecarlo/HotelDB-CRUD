@@ -24,6 +24,7 @@ namespace HotelDBOB_3
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //SQL connection for database
             conn = new SqlConnection(@"Data Source=localhost;Initial Catalog=HotelDB1;Integrated Security=True");
             cmd = new SqlCommand();
             cmd.Connection = conn;
